@@ -1,12 +1,25 @@
 <html>
   <head>
     <style>
-      body {
-        background-image: url("3.jpg");
+      .navigation {
+        display: flex;
+        flex-direction: column; /* вертикально для мобильных */
+      }
+      
+      @media (min-width: 780px) {
+        .navigation {
+          flex-direction: row; /* горизонтально для десктопов */
+        }
       }
     </style>
   </head>
   <body>
     <h1>Привет! Это проба запуска сайта</h1>
+    <div class="navigation">
+      <a href="#">ссылка 1</a>
+      <a href="#">ссылка 2</a>
+      <a href="#">ссылка 3</a>
+      <a href="#">ссылка 4</a>
+    </div>
   </body>
 </html>

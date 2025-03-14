@@ -1,25 +1,49 @@
 <html>
   <head>
     <style>
-      .navigation {
+      .navigation ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
         display: flex;
-        flex-direction: column; /* вертикально для мобильных */
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }      
+      .navigation li {
+        margin-right: 20px;
       }
-      
-      @media (min-width: 780px) {
-        .navigation {
-          flex-direction: row; /* горизонтально для десктопов */
+      .navigation a {
+        text-decoration: none;
+        color: black;
+      }
+      /* Адаптивность для мобильных устройств */
+      @media (max-width: 768px) {
+        .navigation ul {
+          flex-direction: column; /* Вертикальная ориентация на мобильных */
+          align-items: center; /* Выравнивание по центру */
         }
+        .navigation li {
+          margin-bottom: 10px; /* Отступ между пунктами */
+          margin-right: 0; /* Удаление правого отступа */
+        }
+      }   
+      /* Дополнительные стили для улучшения вида */
+      .navigation {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
       }
     </style>
   </head>
   <body>
-    <h1>Привет! Это проба запуска сайта</h1>
-    <ul class="navigation">
-      <li><a href="#">ссылка 1</a></li>
-      <li><a href="#">ссылка 2</a></li>
-      <li><a href="#">ссылка 3</a></li>
-      <li><a href="#">ссылка 4</a></li>
-    </ul>
+    <h1>Публикация сайта с использованием GitHub Pages</h1>
+    <nav class="navigation">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
   </body>
 </html>
